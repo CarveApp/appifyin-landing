@@ -1,0 +1,296 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+
+import { headerData } from '~/navigation';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+
+const metadata = {
+  title: 'SaaS Landing Page',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      {...headerData}
+      actions={[
+        {
+          variant: 'secondary',
+          text: 'Login',
+          href: '#',
+        },
+        {
+          variant: 'primary',
+          text: 'Sign Up',
+          href: '#',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline=" "
+    actions={[
+      { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/onwidget/astrowind' },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'AstroWind Hero Image',
+    }}
+  >
+    <Fragment slot="title">
+      Turn your websites <br /> into an app <span class="rotate-12 text-accent dark:text-white highlight">quickly!</span
+      ><br />
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Effortlessly convert all your websites into a fully functional mobile app with our seamless, user-friendly
+      platform.
+    </Fragment>
+  </Hero2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="Why choose Appifyin?"
+    subtitle="Each of the following features enhances Appifyin's value proposition."
+    columns={2}
+    items={[
+      {
+        title: 'Instant Conversion',
+        description:
+          'Quickly transform your website into a mobile app(currently android only, ios coming soon) without any coding.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Personalized Options',
+        description: `Create an app that truly represents your brand with our easy to add options.`,
+        icon: 'tabler:adjustments',
+      },
+      {
+        title: 'Multiple Project Support',
+        description: 'Manage and convert multiple websites simultaneously.',
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'One-Time Payment Packs',
+        description: `Get all the benefits of our platform with a simple, one-time payment. No recurring fees or hidden charges.`,
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Regular Updates and Enhancements',
+        description: `Stay ahead with our commitment to continuous improvement. Our platform regularly receives updates and new features to enhance your app-building experience`,
+        icon: 'tabler:arrow-iteration',
+      },
+      {
+        title: 'Support',
+        description: `All your queries are answered within 24 hours. You can also request for custom updates to your app anytime(*extra charges may apply).`,
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+
+  <!-- Steps to use -->
+
+  <Steps
+    title=""
+    tagline="simplified process"
+    id="process"
+    isReversed={true}
+    items={[
+      {
+        title: 'Sign Up / Log In',
+        icon: 'tabler:number-3',
+      },
+      {
+        title: 'Explore plans',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Buy a plan',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Add project details',
+        icon: 'tabler:number-4',
+      },
+      {
+        title: 'Start build',
+        icon: 'tabler:number-5',
+      },
+      {
+        title: 'Download app',
+        icon: 'tabler:number-7',
+      },
+      {
+        title: 'Test and launch!',
+        icon: 'tabler:number-7',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+  <!-- Pricing Widget ******************* -->
+
+  <Pricing
+    title="Our prices"
+    id="pricing"
+    subtitle="Only pay for what you need"
+    prices={[
+      {
+        title: 'starter',
+        subtitle: 'Optimal choice for small projects',
+        price: 499,
+        period: ' ',
+        items: [
+          {
+            description: '5 projects',
+          },
+          {
+            description: '10 builds',
+          },
+          {
+            description: 'Android app',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'popular',
+      },
+      {
+        title: 'growth',
+        subtitle: 'Optimal choice for small teams',
+        price: 1999,
+        period: ' ',
+        items: [
+          {
+            description: '10 projects',
+          },
+          {
+            description: '50 builds',
+          },
+          {
+            description: 'Android app',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+      },
+      {
+        title: 'scale',
+        subtitle: 'Optimal choice for companies',
+        price: 4599,
+        period: ' ',
+        items: [
+          {
+            description: '30 projects',
+          },
+          {
+            description: '100 builds',
+          },
+          {
+            description: 'Android app',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    id="faq"
+    items={[
+      {
+        title: 'Do I need any coding skills to use this platform?',
+        description: 'No, our platform is designed to be user-friendly and requires no coding skills.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'Will the app work on both Android and iOS devices?',
+        description: `Currently we are supporting Android only, iOS support coming soon!`,
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'Is there a limit to the number of apps I can create?',
+        description: 'Yes, it depends on the package you choose.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'How do I update my app?',
+        description: `Any changes you make to your website will be automatically reflected in the app in real-time.`,
+        icon: 'tabler:chevrons-right',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Reach out to us"
+    subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
+    callToAction={{
+      text: 'Contact us',
+      href: 'mailto:hello@usecarveapp.com',
+    }}
+    items={[
+      {
+        title: 'Email us',
+        description: '<a href="mailto:hello@usecarveapp.com">hello@usecarveapp.com</a>',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Connect on Discord',
+        description: '<a href="https://discord.usecarveapp.com">Join now</a>',
+        icon: 'tabler:brand-discord',
+      },
+    ]}
+  />
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <!-- <BlogLatestPosts
+    id="blog"
+    title="Stay informed with AstroWind's blog"
+    information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using AstroWind effectively for your projects.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts> -->
+</Layout>
