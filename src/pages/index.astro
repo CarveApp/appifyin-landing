@@ -24,12 +24,12 @@ const metadata = {
         {
           variant: 'secondary',
           text: 'Login',
-          href: '#',
+          href: import.meta.env.PLATFORM_LOGIN_URL,
         },
         {
           variant: 'primary',
           text: 'Sign Up',
-          href: '#',
+          href: import.meta.env.PLATFORM_SIGNUP_URL,
         },
       ]}
       isSticky
@@ -41,12 +41,12 @@ const metadata = {
   <Hero2
     tagline=" "
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/onwidget/astrowind' },
+      { variant: 'primary', target: '_blank', text: 'Get Started', href: import.meta.env.PLATFORM_SIGNUP_URL },
       { text: 'Learn more', href: '#features' },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'AstroWind Hero Image',
+      src: '~/assets/images/about-hero.png',
+      alt: 'Appifyin about image',
     }}
   >
     <Fragment slot="title">
@@ -172,9 +172,9 @@ const metadata = {
           },
         ],
         callToAction: {
-          target: '_blank',
+          target: '_self',
           text: 'Get started',
-          href: '#',
+          href: import.meta.env.PLATFORM_SIGNUP_URL,
         },
         hasRibbon: true,
         ribbonTitle: 'popular',
@@ -196,9 +196,9 @@ const metadata = {
           },
         ],
         callToAction: {
-          target: '_blank',
+          target: '_self',
           text: 'Get started',
-          href: '#',
+          href: import.meta.env.PLATFORM_SIGNUP_URL,
         },
       },
       {
@@ -218,9 +218,9 @@ const metadata = {
           },
         ],
         callToAction: {
-          target: '_blank',
+          target: '_self',
           text: 'Get started',
-          href: '#',
+          href: import.meta.env.PLATFORM_SIGNUP_URL,
         },
       },
     ]}
@@ -276,7 +276,7 @@ const metadata = {
       },
       {
         title: 'Connect on Discord',
-        description: '<a href="https://discord.usecarveapp.com">Join now</a>',
+        description: '<a href="https://discord.gg/3SfRESq4">Join now</a>',
         icon: 'tabler:brand-discord',
       },
     ]}
