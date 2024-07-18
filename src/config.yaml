@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Appifyin
+  site: 'https://appifyin.usecarveapp.com'
   base: '/'
   trailingSlash: false
 
@@ -9,23 +9,19 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Appifyin
+    template: '%s - Appifyin'
+  description: "\U0001F680 Turn your websites into an app quickly!"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Appifyin
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
-    type: website
-  twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
-    cardType: summary_large_image
+    type: website  
 
 i18n:
   language: en
@@ -33,7 +29,7 @@ i18n:
 
 apps:
   blog:
-    isEnabled: true
+    isEnabled: false
     postsPerPage: 6
 
     post:
