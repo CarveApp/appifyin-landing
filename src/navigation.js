@@ -24,6 +24,7 @@ export const footerData = {
       links: [
         { text: 'Terms', href: getPermalink('/terms') },
         { text: 'Privacy Policy', href: getPermalink('/privacy') },
+        { text: 'Refund Policy', href: getPermalink('/refund-policy') },
       ],
     },
     {
