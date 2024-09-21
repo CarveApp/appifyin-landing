@@ -49,6 +49,6 @@ export const footerData = {
   ],
   socialLinks: [
     // { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Discord', icon: 'tabler:brand-discord', href: 'https://discord.gg/3SfRESq4' },
+    { ariaLabel: 'Discord', icon: 'tabler:brand-discord', href: 'https://discord.gg/pzd9jM2w6M' },
   ],
 };
