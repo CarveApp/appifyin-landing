@@ -21,8 +21,8 @@ const {
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
-  <div class:list={['flex flex-col gap-8 md:gap-12', { 'md:flex-row-reverse': isReversed }, { 'md:flex-row': image }]}>
-    <div class:list={['md:py-4 md:self-center', { 'md:basis-1/2': image }, { 'w-full': !image }]}>
+  <div class:list={['flex flex-col gap-4 md:gap-8', { 'md:flex-row-reverse': isReversed }, { 'md:flex-row': image }]}>
+    <div class:list={['md:py-4 md:self-center md:basis-1/2']}>
       <Headline
         title={title}
         subtitle={subtitle}
@@ -41,8 +41,7 @@ const {
           <div class="video-wrapper">
             <iframe
               id="yt-video"
-              class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
-              width="432"
+              class="max-w-[510px] inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
               height="600"
               src="https://www.youtube.com/embed/1Qu-WbJgG1o?si=l4NifAUY-xcsN37H;&enablejsapi=1;&autoplay=1;&mute=1;&loop=1&playlist=1Qu-WbJgG1o;&controls=0&showinfo=0"
               title="YouTube video player"
