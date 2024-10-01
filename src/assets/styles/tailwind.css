@@ -90,3 +90,14 @@
 .dd *:first-child {
   margin-top: 0;
 }
+
+.video-section {
+  height: 600px; /* Adjust this based on your layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-wrapper {
+  width: 100%;
+  max-width: 560px;
+}

@@ -159,4 +159,33 @@ import { UI } from 'astrowind:config';
     onLoad();
     onPageShow();
   });
+
+  // YT Video section
+  document.addEventListener('DOMContentLoaded', function () {
+    const videoSection = document.getElementById('video-section');
+    const ytVideo = document.getElementById('yt-video');
+    let videoLoaded = false;
+    console.log('here', videoSection, ytVideo);
+
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !videoLoaded) {
+            // Load and autoplay the video when it comes into view, with muted audio
+            ytVideo.contentWindow.postMessage('{"event":"command","func":"mute","args":""}', '*');
+            ytVideo.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            videoLoaded = true;
+            observer.disconnect(); // Stop observing once video plays
+          }
+        });
+      },
+      {
+        threshold: 0.5, // Adjust based on when you want to trigger the video (0.5 means halfway visible)
+      }
+    );
+
+    // Start observing the video section
+    observer.observe(videoSection);
+  });
 </script>
