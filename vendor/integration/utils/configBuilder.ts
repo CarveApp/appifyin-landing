@@ -183,7 +183,7 @@ const getAnalytics = (config: Config) => {
     vendors: {
       googleAnalytics: {
         id: undefined,
-        partytown: true,
+        partytown: false,
       },
     },
   };
